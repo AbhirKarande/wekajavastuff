@@ -41,7 +41,7 @@ public class MyWekaUtils {
 		
 		Evaluation eval = new Evaluation(instances);
 		eval.crossValidateModel(classifier, instances, 10, new Random(1), new Object[] { });
-		
+		weka.core.SerializationHelper.write("thepath/themodelname.model", classifier);
 		return eval.pctCorrect();
 	}
     

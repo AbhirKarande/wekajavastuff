@@ -34,9 +34,13 @@ for filename in os.listdir(directory):
     f = os.path.join(directory, filename)
     if os.path.isfile(f):
         if "not" in filename:
-            activity = "no_hand_wash"
-        else:
-            activity = "hand_wash"
+            activity = "not_exercising"
+        elif "bench" in filename:
+            activity = "bench_press"
+        elif "bicep" in filename:
+        	activity = "bicep_curl"
+        elif "lateral" in filename:
+        	activity = "lateral_raise"
 
         with open(f, 'r') as csvfile:
             csvreader = csv.reader(csvfile)
