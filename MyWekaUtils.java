@@ -1,6 +1,6 @@
 
 
-import java.io.BufferedReader;
+import java.io.BufferedReader;	
 import java.io.FileReader;
 import java.io.PrintWriter;
 import java.io.StringReader;
@@ -41,7 +41,7 @@ public class MyWekaUtils {
 		
 		Evaluation eval = new Evaluation(instances);
 		eval.crossValidateModel(classifier, instances, 10, new Random(1), new Object[] { });
-		weka.core.SerializationHelper.write("thepath/themodelname.model", classifier);
+		weka.core.SerializationHelper.write("path with the .model extension", classifier);
 		return eval.pctCorrect();
 	}
     

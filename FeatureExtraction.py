@@ -9,7 +9,7 @@ import os, csv, sys, numpy as np
 
 directory = "data"
 num_features = int(sys.argv[1])
-window_size = int(sys.argv[2])*1000
+window_size = float(sys.argv[2])*1000
 sliding_length = 1000
 if num_features == 2:
     feature_set = ["mean_x", "std_x", "mean_y", "std_y", "mean_z", "std_z", "Activity"]
